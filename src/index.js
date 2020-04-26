@@ -6,9 +6,13 @@ import ReactDOM from 'react-dom';
 import 'css/index.css';
 
 
+let msgArray=[];
+
+function open()
+{
 let coll = document.getElementsByClassName("collapsible");
 let i;
-let msgArray=[];
+
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
@@ -19,6 +23,7 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
+}
 }
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -61,7 +66,7 @@ const SideNavComponents = ()=>{
        
       </div>
 
-      <a href="#about" className="collapsible"><i className="fas fa-users"></i>Groups</a>
+      <a href="#about" className="collapsible" onClick={open}><i className="fas fa-users"></i>Groups</a>
       <div className="content">
           <ul>
               <li><a href="#" className="subgrp">Group 1</a></li>
@@ -70,7 +75,7 @@ const SideNavComponents = ()=>{
               <li><a href="#" className="subgrp">Group 4</a></li>
           </ul>
         </div>
-      <a href="#services" className="collapsible"><i className="fas fa-user-alt"></i>People</a>
+      <a href="#services" className="collapsible" onClick={open}><i className="fas fa-user-alt"></i>People</a>
       <div className="content">
           <ul>
               <li><a href="#" className="subgrp">People 1</a></li>
@@ -79,7 +84,7 @@ const SideNavComponents = ()=>{
               <li><a href="#" className="subgrp">People 4</a></li>
           </ul>    
       </div>
-      <a href="#clients" className="collapsible"><i className="far fa-file-image"></i>Files</a>
+      <a href="#clients" className="collapsible" onClick={open}><i className="far fa-file-image"></i>Files</a>
       <div className="content">
           <ul>
               <li><a href="#" className="subgrp">File 1</a></li>
@@ -88,7 +93,7 @@ const SideNavComponents = ()=>{
               
           </ul>    
       </div>
-      <a href="#contact" className="collapsible"><i className="fas fa-cog"></i>Settings</a>
+      <a href="#contact" className="collapsible" onClick={open}><i className="fas fa-cog"></i>Settings</a>
       <div className="content">
           <ul>
               <li><a href="#" className="subgrp">New Group</a></li>
