@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
+
 import 'css/index.css';
 
 
@@ -41,7 +42,7 @@ function openNav() {
 const Message = ({message})=>{
   return(
     <div className="container">
-    <img src="src/img/chat.png" alt="Avatar"  className="chatpic" readOnly/>
+    <img src="../src/img/chat.png" alt="Avatar"  className="chatpic" readOnly/>
     <input type="text" defaultValue={message} readOnly/>
     {/* <p defaultValue = {message}></p> */}
     <span className="time-right">11:00</span>
