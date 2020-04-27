@@ -48,7 +48,7 @@ const Message = ({message})=>{
   return(
     <div className="container">
     <img src="src/img/chat.png" alt="Avatar"  className="chatpic" readOnly/>
-    <input type="text" defaultValue={message} readOnly/>
+    <input type="text" defaultValue={message} readOnly className="textmsg"/>
     {/* <p defaultValue = {message}></p> */}
     <span className="time-right">11:00</span>
   </div>
@@ -169,7 +169,8 @@ const mainStruct = ({marr})=>{
 
 
 const Struct = ({marr})=>{
-  const arrmsg =marr.map(({message}, index)=> <Message key={index} message={message} />);
+  const arrmsg =marr.map(({message}, index)=> <Message key={index} message={message}  />);
+  
   
   return (
     <div>
@@ -194,11 +195,13 @@ const Struct = ({marr})=>{
 const App = ()=>{
   const messages = [
     [{
-      message:"hi, how are you?"
+      
+      message:"Prabhjot : hi, how are you?"
       
     }],[
     {
-      message:"I am good. How is everything?"
+      
+      message:"Miggi: I am good. How is everything?"
     }
   ]
     ]    

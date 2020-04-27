@@ -1,7 +1,9 @@
 body {
     font-family: "Lato", sans-serif;
   }
- 
+ .textmsg{
+   width: 18em;
+ }
   
   /*********************Sidenav*******************/
   .openNav{
